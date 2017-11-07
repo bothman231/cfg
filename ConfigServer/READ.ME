@@ -1,0 +1,28 @@
+
+
+good tutorial on cloud config
+https://www.bing.com/videos/search?q=you+tube+spring+cloud+config&&view=detail&mid=67D2253F2B7DD339D4D667D2253F2B7DD339D4D6&&FORM=VDRVRV
+
+test consist of maven project (ConfigServer)
+maven project (ConfigClient)
+git repo at https://github.com/bothman231/config/blob/master
+
+to test.
+1) run the server
+2) run the client
+3) update the repo at
+https://github.com/bothman231/config/blob/master/ConfigClient-231saleln.properties
+add something to the end of the id property (it is displayed from the restcontroller)
+
+4) Do a post from postman to
+http://localhost:8881/refresh
+
+5) Check the endpoint
+http://localhost:8881/
+
+Also ${B_SYSTEM_NAME}=231salelane is passed as a vm arg from the run config
+-DB_SYSTEM_NAME=231saleln
+and used to substritute spring.profiles.active=${B_SYSTEM_NAME} in bootstrap.properties
+
+
+
